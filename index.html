@@ -4,90 +4,94 @@
     <title>The Bench Report</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.checked {
-  color: orange;
-}
-</style>
+    <style>
+      .checked {
+        color: orange;
+      }
+      /* Ensure the 'hidden' class from script.js is defined */
+      .hidden {
+          display: none !important;
+      }
+    </style>
   </head>
   <body>
-      <h1 class="title">The Bench Report </h1>
-      <p id="currentTime"></p>
-      <script src="script.js"></script>
-      <h2 id="search-selection-title">---Select Search Type---</h2>
-      <select id="search-type-selector">
-        <option value="judge">Search By Judge</option>
-        <option value="defendant">Search By Defendant</option>
-      </select>
-      
-            <form id="judge-search-form" class="search-form">
-        <h3>---Search By Judge---</h3>
-        <div class="form-group">
-          <label for="judgefname">First Name: </label>
-          <input type="text" id="judgefname" name="judgefname" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="Judgelname">Last name: </label>
-          <input type="text" id="judgelname" name="judgelname" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="courthouse">Court House: </label>
-          <input type="text" id="courthouse" name="courthouse" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="city">City: </label>
-          <input type="text" id="city" name="city">
-        </div>
-      
-        <div class="form-group">
-          <label for="state">State: </label>
-          <select name="state" id="state" required>
-          <option value="">-- Select a State --</option> 
-          </select>
-        </div>
-        
-        <div class="button-container">
-          <input type="submit" value="Search" id="judge-search-button">
-        </div>
-        <br><br>
-      </form>
-
-
-            <form id="defendant-search-form" class="search-form hidden">
-        <h3>---Search By Defendant---</h3>
-        <div class="form-group">
-          <label for="def-fname">First Name: </label>
-          <input type="text" id="def-fname" name="def-fname" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="def-lname">Last name: </label>
-          <input type="text" id="def-lname" name="def-lname" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="def-case-num">Case Number: </label>
-          <input type="text" id="def-case-num" name="def-case-num">
-        </div>
-        
-        <div class="form-group">
-          <label for="state-def">State: </label>
-          <select name="state-def" id="state-def" required>
-          <option value="">-- Select a State --</option> 
-          </select>
-        </div>
-        
-        <div class="button-container">
-          <input type="submit" value="Search" id="def-search-button">
-        </div>
-        <br><br>
-      </form>
+    <h1 class="title">The Bench Report </h1>
+    <p id="currentTime"></p>
     
-       <div id="search-results-output"></div>
+    <h2 id="search-selection-title">---Select Search Type---</h2>
+    <select id="search-type-selector">
+      <option value="judge">Search By Judge</option>
+      <option value="defendant">Search By Defendant</option>
+    </select>
+    
+    <form id="judge-search-form" class="search-form">
+      <h3>---Search By Judge---</h3>
+      <div class="form-group">
+        <label for="judgefname">First Name: </label>
+        <input type="text" id="judgefname" name="judgefname" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="judgelname">Last name: </label>
+        <input type="text" id="judgelname" name="judgelname" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="courthouse">Court House: </label>
+        <input type="text" id="courthouse" name="courthouse" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="city">City: </label>
+        <input type="text" id="city" name="city">
+      </div>
+    
+      <div class="form-group">
+        <label for="state">State: </label>
+        <select name="state" id="state" required>
+          <option value="">-- Select a State --</option> 
+        </select>
+      </div>
+      
+      <div class="button-container">
+        <input type="submit" value="Search" id="judge-search-button">
+      </div>
+      <br><br>
+    </form>
+
+
+    <form id="defendant-search-form" class="search-form hidden">
+      <h3>---Search By Defendant---</h3>
+      <div class="form-group">
+        <label for="def-fname">First Name: </label>
+        <input type="text" id="def-fname" name="def-fname" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="def-lname">Last name: </label>
+        <input type="text" id="def-lname" name="def-lname" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="def-case-num">Case Number: </label>
+        <input type="text" id="def-case-num" name="def-case-num">
+      </div>
+      
+      <div class="form-group">
+        <label for="state-def">State: </label>
+        <select name="state-def" id="state-def" required>
+          <option value="">-- Select a State --</option> 
+        </select>
+      </div>
+      
+      <div class="button-container">
+        <input type="submit" value="Search" id="def-search-button">
+      </div>
+      <br><br>
+    </form>
+    
+    <div id="search-results-output"></div>
+
+    <script src="script.js"></script>
   </body>
-
 </html>
-
