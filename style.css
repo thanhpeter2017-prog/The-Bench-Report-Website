@@ -3,7 +3,8 @@
 /* ========================================================================= */
 body {
     padding: 25px;
-    background-image: url('https://www.seancoxlaw.com/wp-content/uploads/2025/10/unnamed-2025-10-10T155344.577-1.jpg');
+    /* Use a relative path to your local file */
+    background-image: url('background.jpg'); 
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -236,5 +237,6 @@ body {
     margin-bottom: 5px;
     margin-top: 5px;
 }
+
 
 
