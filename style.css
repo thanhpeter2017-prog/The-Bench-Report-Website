@@ -67,15 +67,22 @@ body {
 }
 
 
-/* Style the button container to push the button to the right */
 .search-form .button-container {
+    /* Align the container with the end of the form area */
     display: flex;
-    justify-content: flex-end; /* Pushes content to the right edge */
+    justify-content: flex-end; 
     margin-top: 15px; 
-    /* Adjust margin to align button with input fields */
-    padding-right: 15px; 
+    
+    /* Center the button under the input column (2nd grid column) */
+    /* This requires putting the button container inside a grid layout or aligning it */
+    
+    /* For simplicity, you can remove the button-container and apply the margin directly 
+       to the button, or ensure the button container is placed outside the grid 
+       or given the span property. Let's stick with margins for now: */
+    
+    /* Using a fixed margin to align the button with the start of the inputs */
+    margin-left: 190px; /* 170px label width + 20px label margin-right */
 }
-
 
 /* Style the actual search buttons */
 #judge-search-button,
@@ -229,4 +236,5 @@ body {
     margin-bottom: 5px;
     margin-top: 5px;
 }
+
 
