@@ -30,29 +30,34 @@ body {
     margin-bottom: 30px;
 }
 
-/* Use flexbox for clean two-column label/input alignment */
+/* Align labels and inputs using CSS Grid */
 .search-form .form-group {
-    display: flex;
-    align-items: center;
+    /* Create two columns: one fixed width for the label, one for the input */
+    display: grid;
+    grid-template-columns: 170px 1fr; /* 170px for label, 1fr for input */
+    align-items: center; /* Vertically center the text/input */
     margin-bottom: 10px;
+    max-width: 550px; /* Optional: Constrain the width of the group */
 }
 
 /* Style all labels within the search form container */
 .search-form label {
-    /* Set a consistent width for two-column alignment */
-    width: 150px; 
+    /* Resetting the width is important when using grid */
+    width: auto; 
     text-align: right;
-    margin-right: 20px;
+    margin-right: 20px; /* Space between label text and input box */
 }
 
+/* Ensure inputs and selects only take up the grid column space */
 .search-form input[type="text"],
 .search-form select {
-    /* Allow inputs to fill remaining space */
-    flex-grow: 1; 
+    /* Reset flex-grow and use width 100% to fill the 1fr column */
+    flex-grow: 0; 
+    width: 100%;
+    max-width: 300px; /* Keep this constraint if desired */
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    max-width: 300px;
 }
 
 /* Center the search form titles */
@@ -224,3 +229,4 @@ body {
     margin-bottom: 5px;
     margin-top: 5px;
 }
+
